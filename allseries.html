@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="icon" type="image/png" href="dark.png">
+   <title>All Series</title>
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+   <style>
+      * {
+         padding: 0;
+         box-sizing: border-box;
+         font-family: "League Spartan", sans-serif;
+      }
+
+      body {
+         margin: 0;
+         background-image: url(back.jpg);
+         background-position: top;
+         background-repeat: no-repeat;
+         background-attachment: fixed;
+      }
+
+      ::-webkit-scrollbar {
+         width: 10px;
+         /* Ширина полосы прокрутки */
+      }
+
+      /* Цвет фона полосы прокрутки */
+      ::-webkit-scrollbar-track {
+         background: rgb(0, 0, 0);
+      }
+
+      /* Цвет полосы прокрутки */
+      ::-webkit-scrollbar-thumb {
+         background: rgb(53, 2, 2);
+      }
+
+      /* Задаем радиус скругления углов полосы прокрутки */
+      ::-webkit-scrollbar-thumb {
+         border-radius: 9px;
+      }
+
+
+      .header {
+         width: 100%;
+         height: 80px;
+         background-color: rgb(156, 13, 13);
+         box-shadow: 0px 80px 110px rgb(39, 1, 1) inset;
+         display: flex;
+         justify-content: center;
+         border-bottom: 1px solid rgb(95, 4, 4);
+         position: relative;
+      }
+
+      .content {
+         width: 45%;
+         min-height: 80px;
+         display: flex;
+         justify-content: center;
+      }
+
+      .inhead {
+         font-size: 16px;
+         width: 14%;
+         height: 100%;
+         float: left;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         color: antiquewhite;
+         transition: .5s;
+      }
+
+      .inhead:hover {
+         cursor: pointer;
+         transform: scale(1.1);
+      }
+
+      .mode {
+         filter: invert(100%);
+      }
+
+      .mode:hover {
+         cursor: pointer;
+      }
+
+      .main {
+         width: 50%;
+         height: auto;
+         margin: 0 auto;
+         background-color: #1f1f1f;
+         border: 3px solid rgb(95, 4, 4);
+         margin-top: -10px;
+         box-shadow: 0px 0px 3px rgba(255, 0, 0, 0.295);
+         z-index: 1;
+         display: flex;
+         margin-top: -20px;
+      }
+
+      .search {
+         margin: 0 auto;
+         width: 50.5%;
+         height: 80px;
+         background-color: rgb(185, 14, 14);
+         box-shadow: 0px -80px 110px rgb(53, 2, 2) inset !important;
+         border-radius: 10px;
+         position: relative;
+         z-index: 2;
+      }
+
+      .shadow {
+         width: 100%;
+         height: 100%;
+         border-radius: 10px;
+         position: relative;
+         box-shadow: 0px 10px 10px -5px rgba(255, 0, 0, 0.349);
+      }
+
+      .logo {
+         margin: 0 auto;
+         height: 180px;
+         width: 50%;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+      }
+
+      .logotape {
+         width: 40%;
+         font-size: 20px;
+         color: bisque;
+      }
+
+      .logoimg {
+         margin-top: 40px;
+         position: relative;
+         z-index: -1;
+      }
+
+      .cont {
+         margin: 0 auto;
+         width: 55%;
+      }
+
+      .hover_menu {
+         margin-top: 80px;
+         opacity: 0;
+         position: absolute;
+         width: 55%;
+         min-height: 120px;
+         background-color: #1f1f1f;
+         transition: .5s;
+         display: flex;
+         color: aliceblue;
+      }
+
+      .hover_menu1 {
+         margin-top: 80px;
+         opacity: 0;
+         position: absolute;
+         width: 55%;
+         min-height: 120px;
+         background-color: #1f1f1f;
+         transition: .5s;
+         display: flex;
+         color: aliceblue;
+      }
+
+      .hover_menu2 {
+         margin-top: 80px;
+         opacity: 0;
+         position: absolute;
+         width: 55%;
+         min-height: 120px;
+         background-color: #1f1f1f;
+         transition: .5s;
+         display: flex;
+         color: aliceblue;
+      }
+
+      .hover_menu3 {
+         margin-top: 80px;
+         opacity: 0;
+         position: absolute;
+         width: 55%;
+         min-height: 120px;
+         background-color: #1f1f1f;
+         transition: .5s;
+         display: flex;
+         color: aliceblue;
+      }
+
+      .hover_menu4 {
+         margin-top: 80px;
+         opacity: 0;
+         position: absolute;
+         width: 55%;
+         min-height: 120px;
+         background-color: #1f1f1f;
+         transition: .5s;
+         display: flex;
+         color: aliceblue;
+      }
+
+      .hover_menu5 {
+         margin-top: 80px;
+         opacity: 0;
+         position: absolute;
+         width: 55%;
+         min-height: 120px;
+         background-color: #1f1f1f;
+         transition: .5s;
+         display: flex;
+         color: aliceblue;
+      }
+
+      .hover_menu6 {
+         margin-top: 80px;
+         opacity: 0;
+         position: absolute;
+         width: 55%;
+         min-height: 120px;
+         background-color: #1f1f1f;
+         transition: .5s;
+         display: flex;
+         color: aliceblue;
+         justify-content: center;
+         align-items: center;
+      }
+
+      .light {
+         opacity: 1;
+      }
+
+      
+
+      
+
+      
+
+
+
+      
+
+      
+
+      .dropbtn {
+         background-color: rgb(56, 27, 27);
+         color: white;
+         padding: 8px 17px;
+         font-size: 16px;
+         border: none;
+         transition: .5s;
+      }
+
+      .dropdown {
+         position: absolute;
+         top: 12%;
+         right: 28.7%;
+         display: inline-block;
+      }
+
+      /* Dropdown Content (Hidden by Default) */
+      .dropdown-content {
+         display: none;
+         position: absolute;
+         min-width: 50px;
+         box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+         z-index: 3;
+         top: 30px;
+         transition: .2s;
+      }
+
+      .dropdown-content button {
+         margin: 0;
+         width: 100%;
+         display: flex;
+         justify-content: center;
+         transition: .2s;
+      }
+
+      .dropdown-content button:hover {
+         background-color: #ddd;
+         color: #1f1f1f;
+      }
+
+      .dropdown:hover .dropdown-content {
+         display: block;
+         transition: .5s;
+      }
+      .button_dark {
+         filter: invert(100%) contrast(100%) hue-rotate(-180deg);
+      }
+      .dropdown:hover .dropbtn {
+         background-color: #3e8e41;
+         transition: .5s;
+         border-radius: 5px 5px 0 0;
+      }
+
+      .right button {
+         display: block;
+         float: left;
+      }
+
+      .right {
+         width: 100%;
+         height: auto; /* контейнер будет подстраиваться под высоту содержимого */
+         float: left;
+         padding: 2vw;
+      }
+
+
+      .rightmenu {
+         background-color: rgb(56, 27, 27);
+         width: 100%;
+         height: 100%;
+         float: left;
+
+      }
+
+      .placeholder {
+         width: 100%;
+         height: 40%;
+         background-color: #1f1f1f;
+         border: 2px groove gray;
+         border-radius: 10px;
+         padding: 8px 25px 4px 25px;
+         color: rgb(235, 193, 193);
+         font-size: 18px;
+         text-decoration: none;
+      }
+
+      .contsearch {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         width: 39%;
+         height: 100%;
+         float: left;
+      }
+
+      .block {
+         width: 17.5%;
+         height: 100%;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         float: left;
+      }
+
+      .setbuton {
+         padding: 8px 25px;
+         border: none;
+         background-color: orange;
+         font-size: 14px;
+         transition: .5s;
+      }
+
+      .setbuton:hover {
+         background-color: rgb(55, 86, 87);
+         color: antiquewhite;
+         cursor: pointer;
+      }
+
+
+
+
+
+
+
+      .custom-dropdown {
+         display: none;
+         max-height: 150px;
+         min-width: 380px;
+         overflow-y: auto;
+         background-color: #1f1f1f;
+         color: antiquewhite;
+         position: absolute !important;
+         top: 60px;
+         transition: .5s;
+      }
+
+      .custom-dropdown option {
+         padding: 10px;
+         cursor: pointer;
+         position: relative;
+         z-index: 599;
+         transition: .1s;
+      }
+
+      .custom-dropdown option:hover {
+         background-color: #f0f0f0;
+         color: #1f1f1f;
+      }
+
+
+      .spann {
+         padding: 8px 20px;
+         background-color: rgb(55, 86, 87);
+         color: antiquewhite;
+         font-size: 14px;
+         transition: .5s;
+      }
+
+      .spann:hover {
+         background-color: orange;
+         color: #1f1f1f;
+         cursor: pointer;
+      }
+      
+
+
+      .contforseries {
+         width: 12vw;
+         border: 1px solid black;
+         height: 15vw;
+         display: flex;
+         justify-content: center;
+         float: left;
+         margin-bottom: 3vw;
+         margin-left: 2vw;
+      }
+      .kolo {
+         border-radius: 50%;
+         margin-top: 1vw;
+         width: 10vw;
+         height: 10vw;
+         box-shadow: 0 0 10px rgb(131, 3, 3);
+         position: relative;
+         z-index: 1;
+      }
+      .textonimg {
+         padding: 8px 8px; 
+         text-align: center;
+         color: antiquewhite;
+         background-color: rgb(185, 14, 14);
+         box-shadow: 0px -40px 110px rgb(53, 2, 2) inset !important;
+         width: 9vw;
+         height: 6vw;
+         position: absolute;
+         font-size: 0.8vw;
+         display: flex;
+         justify-content: center;
+         align-items: end;
+         z-index: 0;
+         border-radius:  0 0 10px 10px;
+         margin-top: 8vw;
+      }
+   </style>
+   </style>
+</head>
+
+<body>
+   <div class="header">
+      <a href="index.html">
+      <div style="position: absolute; z-index: 5; top: -10px; left: 30px; height: 80px; width: 300px;">
+         <img class="lol" src="logo.png" alt="logo"  width="200px">
+      </div>
+      </a>
+
+      <div class="content">
+         <div class="inhead mode" id="button">
+            <img onclick="toggle()" src="dark.png" alt="" width="80px">
+         </div>
+         <div class="inhead" onclick="toggle1()">Настройки</div>
+         <div class="inhead"><a href="allseries.html" style="text-decoration: none; color: antiquewhite;">Все аниме</a></div>
+         <div class="inhead" onclick="toggle3()">Word 3</div>
+         <div class="inhead" onclick="toggle4()">Word 4</div>
+         <div class="inhead" onclick="toggle5()">Word 5</div>
+         <div class="inhead" onclick="toggle6()">Word 6</div>
+
+         <div class="hover_menu" id="menu">
+            e
+         </div>
+         <div class="hover_menu1" id="menu1">
+            e1
+         </div>
+         <div class="hover_menu2" id="menu2">
+            e2
+         </div>
+         <div class="hover_menu3" id="menu3">
+            e3
+         </div>
+         <div class="hover_menu4" id="menu4">
+            e4
+         </div>
+         <div class="hover_menu5" id="menu5">
+            e5
+         </div>
+         <div class="hover_menu6" id="menu6">
+            e6
+         </div>
+      </div>
+   </div>
+
+      <div class="logo">
+         <img class="logoimg" src="logo.png" alt="logo" width="500px">
+      </div>
+   <div class="search">
+      <div class="shadow">
+
+
+         <div class="block" style="margin-left: 1%;">
+            <span class="spann">
+               Все аниме
+            </span>
+         </div>
+
+
+         <div class="contsearch">
+
+
+
+            <label for="anime"></label>
+            <input type="text" id="animeInput" list="animeList" placeholder="Напиши/Выберите аниме" class="placeholder">
+
+            <div id="customDropdown" class="custom-dropdown">
+               <option value="Naruto" data-alternative="Наруто">Naruto / Наруто</option>
+               <option value="One Piece" data-alternative="Ван Пис">One Piece / Ван Пис</option>
+               <option value="Seven Deadly Sins" data-alternative="Семь Смертных Грехов">Seven Deadly Sins / Семь
+                  Смертных Грехов
+               </option>
+               <option value="Fairy Tail" data-alternative="Хвост Феи">Fairy Tail / Хвост Феи</option>
+               <option value="Attack on Titan" data-alternative="Атака Титанов">Attack on Titan / Атака Титанов</option>
+               <option value="Fullmetal Alchemist" data-alternative="Стальной алхимик">Fullmetal Alchemist / Стальной
+                  алхимик</option>
+               <option value="My Hero Academia" data-alternative="Моя геройская академия">My Hero Academia / Моя
+                  геройская академия
+               </option>
+               <option value="Death Note" data-alternative="Тетрадь смерти">Death Note / Тетрадь смерти</option>
+               <option value="Demon Slayer" data-alternative="Сбой демона">Demon Slayer / Сбой демона</option>
+               <option value="Magi: The Labyrinth of Magic" data-alternative="Маги: Лабиринт магии">Magi: The Labyrinth
+                  of Magic /
+                  Маги: Лабиринт магии</option>
+
+            </div>
+
+
+         </div>
+         <div class="block">
+            <button id="submitButton" class="setbuton">
+               Поиск
+            </button>
+         </div>
+
+
+      </div>
+   </div>
+   <div class="main">
+
+      <div class="right">
+
+         <div class="row">
+            <div class="contforseries">
+               <a href="setSeriesMagic.html"><img src="seriesMagic.jpg" class="kolo"></a>
+               <a class="textonimg" href="setSeriesMagic.html">Магическая битва</a>
+            </div>
+            <div class="contforseries">
+               <a href="setSeriesMagic.html"><img src="seriesSeven.jpg" class="kolo"></a>
+               <a class="textonimg" href="setSeriesMagic.html">Семь смертных грехов</a>
+            </div>
+            <div class="contforseries">
+               <a href="setSeriesMagic.html"><img src="seriesPiece.jpg" class="kolo"></a>
+               <a class="textonimg" href="setSeriesMagic.html">Ван Пис</a>
+            </div>
+         </div>
+         <div class="row">
+            <div class="contforseries">
+               <a href="setSeriesMagic.html"><img src="seriesMagic.jpg" class="kolo"></a>
+               <a class="textonimg" href="setSeriesMagic.html">Магическая битва</a>
+            </div>
+            <div class="contforseries">
+               <a href="setSeriesMagic.html"><img src="seriesMagic.jpg" class="kolo"></a>
+               <a class="textonimg" href="setSeriesMagic.html">Магическая битва</a>
+            </div>
+            <div class="contforseries">
+               <a href="setSeriesMagic.html"><img src="seriesMagic.jpg" class="kolo"></a>
+               <a class="textonimg" href="setSeriesMagic.html">Магическая битва</a>
+            </div>
+         </div>
+         <div class="row">
+            <div class="contforseries">
+               <a href="setSeriesMagic.html"><img src="seriesMagic.jpg" class="kolo"></a>
+               <a class="textonimg" href="setSeriesMagic.html">Магическая битва</a>
+            </div>
+            <div class="contforseries">
+               <a href="setSeriesMagic.html"><img src="seriesMagic.jpg" class="kolo"></a>
+               <a class="textonimg" href="setSeriesMagic.html">Магическая битва</a>
+            </div>
+            <div class="contforseries">
+               <a href="setSeriesMagic.html"><img src="seriesMagic.jpg" class="kolo"></a>
+               <a class="textonimg" href="setSeriesMagic.html">Магическая битва</a>
+            </div>
+         </div>
+         <div class="row">
+            <div class="contforseries">
+               <a href="setSeriesMagic.html"><img src="seriesMagic.jpg" class="kolo"></a>
+               <a class="textonimg" href="setSeriesMagic.html">Магическая битва</a>
+            </div>
+            <div class="contforseries">
+               <a href="setSeriesMagic.html"><img src="seriesMagic.jpg" class="kolo"></a>
+               <a class="textonimg" href="setSeriesMagic.html">Магическая битва</a>
+            </div>
+            <div class="contforseries">
+               <a href="setSeriesMagic.html"><img src="seriesMagic.jpg" class="kolo"></a>
+               <a class="textonimg" href="setSeriesMagic.html">Магическая битва</a>
+            </div>
+         </div>
+
+      </div>
+
+   </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <script>
+
+      document.getElementById('animeInput').addEventListener('input', function () {
+         var inputText = this.value.toLowerCase();
+         var options = document.querySelectorAll('#customDropdown option');
+         for (var i = 0; i < options.length; i++) {
+            var optionText = options[i].textContent.toLowerCase();
+            var alternativeText = options[i].getAttribute('data-alternative').toLowerCase();
+            if (optionText.startsWith(inputText) || alternativeText.startsWith(inputText)) {
+               options[i].style.display = 'block';
+            } else {
+               options[i].style.display = 'none';
+            }
+         }
+      });
+
+
+
+      document.getElementById('animeInput').addEventListener('click', function () {
+         document.getElementById('customDropdown').style.display = 'block';
+      });
+
+      document.getElementById('customDropdown').addEventListener('click', function (e) {
+         if (e.target.tagName === 'OPTION') {
+            document.getElementById('animeInput').value = e.target.value;
+            document.getElementById('customDropdown').style.display = 'none';
+         }
+      });
+
+      document.addEventListener('click', function (e) {
+         if (!document.getElementById('animeInput').contains(e.target) && !document.getElementById('customDropdown').contains(e.target)) {
+            document.getElementById('customDropdown').style.display = 'none';
+         }
+      });
+
+
+
+
+
+
+      document.getElementById('submitButton').addEventListener('click', function () {
+         var selectedValue = document.getElementById('animeInput').value; // Получаем выбранное значение из поля ввода
+         console.log(selectedValue); // Пример: выводим выбранное значение в консоль
+         // Вы можете выполнить другие действия здесь, используя выбранное значение, например, отправить его на сервер
+      });
+
+
+      
+      function toggle() {
+         var butElement = document.getElementById("button");
+         if (butElement) {
+            butElement.classList.toggle("button_dark");
+         }
+      }
+      function toggle1() {
+         hideAllMenusExcept("menu1");
+         var navElement = document.getElementById("menu1");
+         if (navElement) {
+            navElement.classList.toggle("light");
+         }
+      }
+
+      function toggle2() {
+         hideAllMenusExcept("menu2");
+         var navElement = document.getElementById("menu2");
+         if (navElement) {
+            navElement.classList.toggle("light");
+         }
+      }
+
+      function toggle3() {
+         hideAllMenusExcept("menu3");
+         var navElement = document.getElementById("menu3");
+         if (navElement) {
+            navElement.classList.toggle("light");
+         }
+      }
+
+      function toggle4() {
+         hideAllMenusExcept("menu4");
+         var navElement = document.getElementById("menu4");
+         if (navElement) {
+            navElement.classList.toggle("light");
+         }
+      }
+
+      function toggle5() {
+         hideAllMenusExcept("menu5");
+         var navElement = document.getElementById("menu5");
+         if (navElement) {
+            navElement.classList.toggle("light");
+         }
+      }
+
+      function toggle6() {
+         hideAllMenusExcept("menu6");
+         var navElement = document.getElementById("menu6");
+         if (navElement) {
+            navElement.classList.toggle("light");
+         }
+      }
+
+      function hideAllMenusExcept(exceptMenuId) {
+         for (var i = 1; i <= 6; i++) {
+            var menuId = "menu" + i;
+            if (menuId !== exceptMenuId) {
+               var menu = document.getElementById(menuId);
+               if (menu) {
+                  menu.classList.remove("light");
+               }
+            }
+         }
+      }
+
+
+      function showContent(contentId) {
+         var content = document.getElementById(contentId);
+         if (content) {
+            content.classList.add("light");
+         }
+      }
+
+      function hideContent(contentId) {
+         var content = document.getElementById(contentId);
+         if (content) {
+            content.classList.remove("light");
+         }
+      }
+
+
+
+
+      
+   </script>
+</body>
+
+</html>
