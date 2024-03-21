@@ -697,7 +697,7 @@
 
     
 
-
+     
 
 
 
@@ -848,12 +848,13 @@
       
       
 
-         var videoLinks = {
-               1080: "https://r8121.kujo-jotaro.com/jujutsu-kaisen/1.1080.812841b2c0546248.mp4?hash1=ef7a11a639792b3cc3ea6106dce5623e&amp;hash2=f58ff1005510a7bfb9d5ea57de7d5082",
-               720: "https://r8121.kujo-jotaro.com/jujutsu-kaisen/1.720.88c6fdc84857fa83.mp4?hash1=e25bca25a7a2319fa1f7adc52448eece&amp;hash2=79af7b82cd4f6295ff886a937a51f44e",
-               480: "https://r8121.kujo-jotaro.com/jujutsu-kaisen/1.480.46d8315230aea14f.mp4?hash1=aa8d7f760f7f319b0b05a587d67ae57f&amp;hash2=4e6c4320097a2494d0af758e51205b8f",
-               360: "https://r8121.kujo-jotaro.com/jujutsu-kaisen/1.360.ac6899dc9e2104a5.mp4?hash1=27fe7ba9fe89b514cb3556b40c4c2681&amp;hash2=a570a397c0d07a173425848508394852"
+          var videoLinks = {
+               1080: "https://r220107.kujo-jotaro.com/jujutsu-kaisen/1.1080.812841b2c0546248.mp4?hash1=341ef436578b0bfba922d6c999275b16&hash2=c5e7858f6d8227fef37fae7511e8ebae",
+               720: "https://r220107.kujo-jotaro.com/jujutsu-kaisen/1.720.88c6fdc84857fa83.mp4?hash1=4f9a3edb0857ff981b64c7825727d7bf&hash2=6ee87eb396955aac3efa25124f32c485",
+               480: "https://r220107.kujo-jotaro.com/jujutsu-kaisen/1.480.46d8315230aea14f.mp4?hash1=1e13cd073e93cda668a9672d2f2ae362&hash2=7140d70750e88f6bfa1ba74accbef647",
+               360: "https://r220107.kujo-jotaro.com/jujutsu-kaisen/1.360.ac6899dc9e2104a5.mp4?hash1=1206d91841f46a00807061a01b80ef5a&hash2=f0864bf316f63f6386309f92957e234a"
             };
+
 
            document.addEventListener('DOMContentLoaded', function () {
                var videoPlayer = document.getElementById('videoPlayer');
@@ -886,7 +887,7 @@
                      console.log(resolution);
                      changeSourceAndPlay(resolution); // Вызываем функцию changeSourceAndPlay с разрешением
                      console.log("lad");
-                     videoPlayer.style.display = "block"; // показать видео 
+                     videoSource.style.display = "block"; // показать видео 
 
                      // Удаление подсветки у всех кнопок
                      qualityButtons.forEach(function (btn) {
